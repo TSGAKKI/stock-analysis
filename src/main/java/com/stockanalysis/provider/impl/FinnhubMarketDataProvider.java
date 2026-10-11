@@ -42,12 +42,13 @@ public class FinnhubMarketDataProvider implements MarketDataProvider {
         return new Quote(symbol, decimal(body, "c", asOf, FactStatus.DELAYED, "/quote"), decimal(body, "d", asOf, FactStatus.DELAYED, "/quote"), decimal(body, "dp", asOf, FactStatus.DELAYED, "/quote"), unavailable("/quote: volume not supplied by this endpoint"));
     }
 
-    @Override public List<Bar> getBars(String symbol, String interval) {
+    @Override public FactValue<List<Bar>> getBars(String symbol, String interval) {
         String resolution = resolution(interval);
         long to = Instant.now().getEpochSecond();
         long from = Instant.now().minus(Duration.ofDays(365)).getEpochSecond();
         JsonNode body = get("/stock/candle", symbol, "resolution=" + resolution + "&from=" + from + "&to=" + to);
-        if (body == null || !"ok".equalsIgnoreCase(body.path("s").asText())) return List.of();
+        if (body == null) return unavailable("/stock/candle");
+        if (!"ok".equalsIgnoreCase(body.path("s").asText())) return unavailable("/stock/candle: " + body.path("error").asText("no data returned"));
         JsonNode times = body.path("t"); JsonNode opens = body.path("o"); JsonNode highs = body.path("h"); JsonNode lows = body.path("l"); JsonNode closes = body.path("c"); JsonNode volumes = body.path("v");
         List<Bar> bars = new ArrayList<>();
         FactStatus status = "D".equals(resolution) ? FactStatus.EOD : FactStatus.DELAYED;
@@ -55,7 +56,7 @@ public class FinnhubMarketDataProvider implements MarketDataProvider {
             Instant barTime = timestamp(times.path(i), Instant.now());
             bars.add(new Bar(available(barTime, barTime, status, "/stock/candle?resolution=" + resolution), decimal(opens, i, barTime, status, resolution), decimal(highs, i, barTime, status, resolution), decimal(lows, i, barTime, status, resolution), decimal(closes, i, barTime, status, resolution), longValue(volumes, i, barTime, status, resolution)));
         }
-        return bars;
+        return available(List.copyOf(bars), Instant.now(), status, "/stock/candle?resolution=" + resolution);
     }
 
     private JsonNode get(String path, String symbol, String extraQuery) {
