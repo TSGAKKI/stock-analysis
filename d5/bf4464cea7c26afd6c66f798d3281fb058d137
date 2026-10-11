@@ -1,0 +1,24 @@
+src/main/java/com/stockanalysis/provider/impl/FinnhubMarketDataProvider.java
+  s_335c38f0183307::t_b7141f5a85cda6 45,50-51,59
+src/main/java/com/stockanalysis/provider/MarketDataProvider.java
+  s_335c38f0183307::t_30347d8955707a 4
+  s_335c38f0183307::t_b7141f5a85cda6 9
+src/main/java/com/stockanalysis/api/StockController.java
+  s_335c38f0183307::t_b7141f5a85cda6 21
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.7",
+  "base_commit_sha": "d5bf4464cea7c26afd6c66f798d3281fb058d137",
+  "prompts": {},
+  "sessions": {
+    "s_335c38f0183307": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a12691-c5c4-7830-9f31-a43374cdc520",
+        "model": "gpt-5.6-terra"
+      },
+      "human_author": "liulei451 <liulei451@jd.com>"
+    }
+  }
+}
