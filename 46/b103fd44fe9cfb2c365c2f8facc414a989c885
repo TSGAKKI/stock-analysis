@@ -1,0 +1,97 @@
+src/main/java/com/stockanalysis/provider/MarketDataProvider.java
+  s_335c38f0183307::t_b9d26a082bb051 1-8
+src/main/java/com/stockanalysis/provider/FinancialDataProvider.java
+  s_335c38f0183307::t_b9d26a082bb051 1-6
+pom.xml
+  s_335c38f0183307::t_e562dd54cc59d7 5,7-8
+  s_335c38f0183307::t_832d5f4e3d147a 10
+  s_335c38f0183307::t_b9d26a082bb051 1-4,6,9,11
+src/main/java/com/stockanalysis/StockFactLayerApplication.java
+  s_335c38f0183307::t_b9d26a082bb051 1-9
+src/main/java/com/stockanalysis/service/UnavailableStockFactService.java
+  s_335c38f0183307::t_b9d26a082bb051 1-22
+frontend/app/globals.css
+  s_335c38f0183307::t_b9d26a082bb051 1
+.mvn/settings.xml
+  s_335c38f0183307::t_8b68d943b0b475 1-5
+src/main/java/com/stockanalysis/config/FinnhubProperties.java
+  s_335c38f0183307::t_92fe951c980001 1-9
+src/main/java/com/stockanalysis/domain/FactValue.java
+  s_335c38f0183307::t_b9d26a082bb051 1-19
+frontend/next.config.ts
+  s_335c38f0183307::t_b9d26a082bb051 1-3
+src/main/java/com/stockanalysis/domain/FinancialFact.java
+  s_335c38f0183307::t_b9d26a082bb051 1-5
+src/main/java/com/stockanalysis/provider/impl/FinnhubMarketDataProvider.java
+  s_335c38f0183307::t_92fe951c980001 1-75
+src/main/java/com/stockanalysis/api/StockController.java
+  s_335c38f0183307::t_92fe951c980001 4
+  s_335c38f0183307::t_5370d9ab70da33 5,16-26
+  s_335c38f0183307::t_b9d26a082bb051 1-3,6-15,27
+.gitignore
+  s_335c38f0183307::t_8b68d943b0b475 2
+  s_335c38f0183307::t_b9d26a082bb051 1,3-6
+  s_335c38f0183307::t_60d4f32c33fd26 7
+src/main/java/com/stockanalysis/domain/FactStatus.java
+  s_335c38f0183307::t_b9d26a082bb051 1-2
+  s_335c38f0183307::t_92fe951c980001 3
+src/main/java/com/stockanalysis/domain/Quote.java
+  s_335c38f0183307::t_b9d26a082bb051 1-3
+src/main/java/com/stockanalysis/provider/EventDataProvider.java
+  s_335c38f0183307::t_b9d26a082bb051 1-6
+src/test/java/com/stockanalysis/provider/impl/FinnhubMarketDataProviderTest.java
+  s_335c38f0183307::t_f09a6af83a9e70 1-20
+frontend/app/stocks/[symbol]/page.tsx
+  s_335c38f0183307::t_b9d26a082bb051 1-7
+AGENTS.md
+  s_335c38f0183307::t_2f8e6a11713880 44-64
+  s_335c38f0183307::t_1c3685da0b6d52 1-16,18-38,40-43
+  s_335c38f0183307::t_a4ed4004b3685a 17,39
+frontend/tsconfig.json
+  s_335c38f0183307::t_a8d86574dd9848 1-36
+src/main/java/com/stockanalysis/domain/Bar.java
+  s_335c38f0183307::t_ec5440e06d5232 5
+  s_335c38f0183307::t_b9d26a082bb051 1-4
+docker-compose.yml
+  s_335c38f0183307::t_b9d26a082bb051 1-14
+src/main/java/com/stockanalysis/domain/Instrument.java
+  s_335c38f0183307::t_b9d26a082bb051 1-7
+src/main/java/com/stockanalysis/domain/StockEvent.java
+  s_335c38f0183307::t_b9d26a082bb051 1-5
+frontend/app/layout.tsx
+  s_335c38f0183307::t_b9d26a082bb051 1-3
+frontend/components/stock.tsx
+  s_335c38f0183307::t_b9d26a082bb051 1-13
+frontend/next-env.d.ts
+  s_335c38f0183307::t_a8d86574dd9848 1-6
+.env.example
+  s_335c38f0183307::t_b9d26a082bb051 1-4
+  s_335c38f0183307::t_92fe951c980001 5
+src/main/java/com/stockanalysis/config/ProviderConfiguration.java
+  s_335c38f0183307::t_92fe951c980001 1-8
+src/main/resources/application.yml
+  s_335c38f0183307::t_92fe951c980001 1-4
+frontend/package.json
+  s_335c38f0183307::t_832d5f4e3d147a 1
+README.md
+  s_335c38f0183307::t_b9d26a082bb051 1-13
+src/test/java/com/stockanalysis/domain/FactValueTest.java
+  s_335c38f0183307::t_92fe951c980001 16
+  s_335c38f0183307::t_b9d26a082bb051 1-15,17-18
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.7",
+  "base_commit_sha": "46b103fd44fe9cfb2c365c2f8facc414a989c885",
+  "prompts": {},
+  "sessions": {
+    "s_335c38f0183307": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a12691-c5c4-7830-9f31-a43374cdc520",
+        "model": "gpt-5.6-terra"
+      },
+      "human_author": "liulei451 <liulei451@jd.com>"
+    }
+  }
+}
