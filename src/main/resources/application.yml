@@ -1,0 +1,4 @@
+providers:
+  finnhub:
+    api-key: ${FINNHUB_API_KEY:}
+    base-url: ${FINNHUB_BASE_URL:https://finnhub.io/api/v1}

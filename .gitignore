@@ -1,0 +1,7 @@
+target/
+.m2/
+frontend/.next/
+frontend/node_modules/
+.env
+.env.local
+error.log

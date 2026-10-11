@@ -1,0 +1,13 @@
+type Props = { symbol?: string };
+const Unavailable = () => <p className="unavailable">UNAVAILABLE — provider integration has not been configured.</p>;
+const Panel = ({ title, children, wide = false }: { title: string; children?: React.ReactNode; wide?: boolean }) => <section className={`card ${wide ? "wide" : ""}`}><h2>{title}</h2>{children ?? <Unavailable />}</section>;
+export const Watchlist = () => <aside className="card"><h2>Watchlist</h2><Unavailable /></aside>;
+export const StockHeader = ({ symbol }: Props) => <header className="card"><h1>{symbol}</h1><span className="badge">UNAVAILABLE</span><Unavailable /></header>;
+export const PriceChart = ({ symbol }: Props) => <Panel title={`${symbol} Price Chart`} wide><Unavailable /></Panel>;
+export const VolumePane = () => <Panel title="Volume" />;
+export const KeyStatistics = () => <Panel title="Key Statistics" />;
+export const TechnicalIndicators = () => <Panel title="Technical Indicators" />;
+export const FinancialHighlights = () => <Panel title="Financial Highlights" />;
+export const ValuationPanel = () => <Panel title="Valuation" />;
+export const UpcomingEvents = () => <Panel title="Upcoming Events" />;
+export const CompanyProfile = () => <Panel title="Company Profile" />;
