@@ -1,3 +1,7 @@
+spring:
+  config:
+    import: optional:file:.env[.properties]
+
 providers:
   finnhub:
     api-key: ${FINNHUB_API_KEY:}
